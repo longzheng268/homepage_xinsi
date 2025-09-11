@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  中文：本 sitemap 用于搜索引擎收录主页、生日页、学习日志等主要页面。
+  English: This sitemap is for search engines to index homepage, birthday page, study log, etc.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.lz-0315.com/</loc>
