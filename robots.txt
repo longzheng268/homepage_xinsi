@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /doc/
+Disallow: /admin/
+Disallow: /private/
+Sitemap: https://www.lz-0315.com/sitemap.xml
