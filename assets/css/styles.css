@@ -1,0 +1,241 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+.menu-emoji {
+    font-size: 1.3em;
+    margin-right: 2px;
+}
+.menu-item .menu-link {
+    margin-right: 6px;
+    margin-bottom: 2px;
+}
+@media (max-width: 600px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin-bottom: 10px;
+    }
+    .menu-emoji {
+        font-size: 1.1em;
+        margin-bottom: 2px;
+    }
+    .menu-item .menu-link {
+        margin-right: 0;
+        margin-bottom: 2px;
+        width: 100%;
+        text-align: left;
+    }
+}
+/* 主页目录卡片区 */
+.home-menu-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 6px 32px rgba(60,60,60,0.10);
+    border-radius: 18px;
+    padding: 32px 24px;
+    margin: 32px auto 24px auto;
+    max-width: 520px;
+}
+.menu-avatar-wrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    object-fit: cover;
+    background: #f5f5f5;
+}
+.menu-content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+.menu-toggle-btn {
+    padding: 10px 32px;
+    font-size: 18px;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#6bc1ff,#8ed8ff);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(107,193,255,0.18);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+.menu-toggle-btn:hover {
+    background: linear-gradient(135deg,#4fa3e3,#6bc1ff);
+}
+.menu-list {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+}
+.menu-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px 18px;
+    background: rgba(230,245,255,0.6);
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 1px 4px rgba(60,60,60,0.06);
+}
+.menu-link:hover {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+.birthday-link {
+    color: #d23f31;
+    background: rgba(255,235,238,0.7);
+}
+.birthday-link:hover {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+@media (max-width: 600px) {
+    .home-menu-card {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+    .menu-avatar {
+        width: 72px;
+        height: 72px;
+    }
+    .menu-toggle-btn {
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+    .menu-link {
+        font-size: 15px;
+        padding: 7px 12px;
+    }
+}
+/* assets/css/styles.css */
+body {
+    font-family: 'PingFang SC', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+header {
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; /* 恢复 header 居中 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center; /* 恢复 main 内容居中 */
+}
+
+footer {
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* 减小间距，从 1rem 改为 0.5rem */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #3498db;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo {
+    height: 80px; /* 增大 logo，从 60px 改为 80px */
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* 响应式设计 */
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.2rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    section {
+        padding: 1.5rem;
+    }
+    .footer-logo {
+        height: 70px;
+    }
+}
+    

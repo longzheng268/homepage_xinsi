@@ -4,25 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>辛巳学习日志网</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 新增按钮样式 -->
+    <style>
+        .birthday-button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 30px 0;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .birthday-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        @media (max-width: 480px) {
+            .birthday-button {
+                padding: 10px 25px;
+                font-size: 14px;
+                margin: 20px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>辛巳学习日志网</h1>
-    <p>记录每一天的学习历程</p>
-</header>
-<main>
-    <section>
-        <h2>学习计划</h2>
-        <p>每天进步一点点</p>
-    </section>
-</main>
-<footer>
-    <p>
-        <a href="https://beian.miit.gov.cn/" target="_blank">
-            陇ICP备2024015550号-1
-        </a>
-    </p>
-</footer>
+    <header>
+        <h1>辛巳学习日志网</h1>
+        <p>记录每一天的学习历程</p>
+    </header>
+
+    <!-- 主页目录卡片区 -->
+    <div class="home-menu-card">
+        <div class="menu-avatar-wrap">
+            <img src="assets/img/头像.png" alt="我的头像" class="menu-avatar">
+        </div>
+        <div class="menu-content-wrap">
+            <button id="menu-toggle" class="menu-toggle-btn">📂 目录</button>
+            <div id="menu-list" class="menu-list">
+                <div class="menu-item">
+                    <span class="menu-emoji">📖</span>
+                    <a href="https://doc.lz-0315.com/" target="_blank" rel="noopener" class="menu-link">学习日志网（https，待完善）</a>
+                    <a href="http://doc.lz-0315.com/" target="_blank" rel="noopener" class="menu-link">学习日志网（http）</a>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-emoji">🗂️</span>
+                    <a href="https://clouddisk.lz-0315.com" target="_blank" rel="noopener" class="menu-link">资源镜像站（https，待完善）</a>
+                    <a href="http://download.clouddisk.lz-0315.com:12440/" target="_blank" rel="noopener" class="menu-link">资源镜像站（http）</a>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-emoji">🎂</span>
+                    <a href="https://birthday.lz-0315.com/" target="_blank" rel="noopener" class="menu-link birthday-link">生日特别页（https）</a>
+                    <a href="http://birthday.lz-0315.com/" target="_blank" rel="noopener" class="menu-link birthday-link">生日特别页（http）</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuBtn = document.getElementById('menu-toggle');
+        const menuList = document.getElementById('menu-list');
+        let menuOpen = false;
+        menuBtn.onclick = function() {
+            menuOpen = !menuOpen;
+            menuList.style.display = menuOpen ? 'flex' : 'none';
+            menuBtn.textContent = menuOpen ? '📂 收起目录' : '📂 目录';
+        };
+        // 默认收起
+        menuList.style.display = 'none';
+    </script>
+
+    <main>
+        <section>
+            <h2>学习计划</h2>
+            <p>每天进步一点点</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>
+                <a href="https://beian.miit.gov.cn/" target="_blank">
+                    陇ICP备2024015550号-1
+                </a>
+            </p>
+            <div class="logo-container">
+                <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">
+                    <img src="assets/img/upyun_logo.svg" alt="又拍云" class="footer-logo">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
