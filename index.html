@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>辛巳学习日志网</title>
+    <title id="i18n-title">辛巳学习日志网</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/i18n.js"></script>
     <!-- 标签页图标 -->
     <link rel="icon" type="image/png" href="assets/img/头像.png">
     <!-- 新增按钮样式 -->
@@ -38,8 +39,9 @@
 </head>
 <body>
     <header>
-        <h1>辛巳学习日志网</h1>
-        <p>记录每一天的学习历程</p>
+        <h1 id="i18n-title">辛巳学习日志网</h1>
+        <p id="i18n-subtitle">记录每一天的学习历程</p>
+    <button id="i18n-lang-switch" class="lang-switch-btn">English</button>
     </header>
 
     <!-- 主页目录卡片区 -->
@@ -52,52 +54,41 @@
             <div id="menu-list" class="menu-list">
                 <div class="menu-item">
                     <span class="menu-emoji">📖</span>
-                    <a href="https://doc.lz-0315.com/" target="_blank" rel="noopener" class="menu-link">学习日志网（https，待完善）</a>
-                    <a href="http://doc.lz-0315.com/" target="_blank" rel="noopener" class="menu-link">学习日志网（http）</a>
+                    <a id="i18n-studylog-https" href="https://doc.lz-0315.com/" target="_blank" rel="noopener" class="menu-link">学习日志网（https，待完善）</a>
+                    <a id="i18n-studylog-http" href="http://doc.lz-0315.com/" target="_blank" rel="noopener" class="menu-link">学习日志网（http）</a>
                 </div>
                 <div class="menu-item">
                     <span class="menu-emoji">🗂️</span>
-                    <a href="https://clouddisk.lz-0315.com" target="_blank" rel="noopener" class="menu-link">资源镜像站（https，待完善）</a>
-                    <a href="http://download.clouddisk.lz-0315.com:12440/" target="_blank" rel="noopener" class="menu-link">资源镜像站（http）</a>
+                    <a id="i18n-resource-https" href="https://clouddisk.lz-0315.com" target="_blank" rel="noopener" class="menu-link">资源镜像站（https，待完善）</a>
+                    <a id="i18n-resource-http" href="http://download.clouddisk.lz-0315.com:12440/" target="_blank" rel="noopener" class="menu-link">资源镜像站（http）</a>
                 </div>
                 <div class="menu-item">
                     <span class="menu-emoji">🎂</span>
-                    <a href="https://birthday.lz-0315.com/" target="_blank" rel="noopener" class="menu-link birthday-link">生日特别页（https）</a>
-                    <a href="http://birthday.lz-0315.com/" target="_blank" rel="noopener" class="menu-link birthday-link">生日特别页（http）</a>
+                    <a id="i18n-birthday-https" href="https://birthday.lz-0315.com/" target="_blank" rel="noopener" class="menu-link birthday-link">生日特别页（https）</a>
+                    <a id="i18n-birthday-http" href="http://birthday.lz-0315.com/" target="_blank" rel="noopener" class="menu-link birthday-link">生日特别页（http）</a>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        const menuBtn = document.getElementById('menu-toggle');
-        const menuList = document.getElementById('menu-list');
-        let menuOpen = false;
-        menuBtn.onclick = function() {
-            menuOpen = !menuOpen;
-            menuList.style.display = menuOpen ? 'flex' : 'none';
-            menuBtn.textContent = menuOpen ? '📂 收起目录' : '📂 目录';
-        };
-        // 默认收起
-        menuList.style.display = 'none';
+        // ...菜单展开收起逻辑已集成到 i18n.js ...
     </script>
 
     <main>
         <section>
-            <h2>学习计划</h2>
-            <p>每天进步一点点</p>
+            <h2 id="i18n-study-plan">学习计划</h2>
+            <p id="i18n-study-tip">每天进步一点点</p>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <p>
-                <a href="https://beian.miit.gov.cn/" target="_blank">
-                    陇ICP备2024015550号-1
-                </a>
+                <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" id="i18n-icp">陇ICP备2024015550号-1</a>
             </p>
             <div class="logo-container">
-                <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">
-                    <img src="assets/img/upyun_logo.svg" alt="又拍云" class="footer-logo">
+                <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">
+                    <img id="footer-logo" src="assets/img/upyun_logo.svg" alt="又拍云" class="footer-logo">
                 </a>
             </div>
         </div>

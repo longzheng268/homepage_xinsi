@@ -1,3 +1,32 @@
+/* 语言切换按钮 */
+.lang-switch-btn {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    padding: 6px 18px;
+    border-radius: 18px;
+    background: #fff;
+    color: #1976d2;
+    border: none;
+    box-shadow: 0 2px 8px rgba(60,60,60,0.10);
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+.lang-switch-btn:hover {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+@media (max-width: 600px) {
+    .lang-switch-btn {
+        top: 10px;
+        right: 10px;
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+}
 .menu-item {
     display: flex;
     align-items: center;
@@ -130,14 +159,14 @@
 }
 /* assets/css/styles.css */
 body {
-    font-family: 'PingFang SC', Arial, sans-serif;
+    font-family: 'PingFang SC', Arial, 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 header {
@@ -151,6 +180,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    letter-spacing: 0.02em;
     font-weight: 500;
 }
 
@@ -173,6 +203,8 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center; /* 恢复 main 内容居中 */
+    word-break: break-word;
+    font-size: 1.08em;
 }
 
 footer {
