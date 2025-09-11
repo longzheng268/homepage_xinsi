@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 核心页面 -->
+  <sitemap>
+    <loc>https://www.lz-0315.com/sitemap-pages.xml</loc>
+    <lastmod>2024-06-30</lastmod>
+  </sitemap>
+  <!-- 文章内容 -->
+  <sitemap>
+    <loc>https://www.lz-0315.com/sitemap-posts.xml</loc>
+    <lastmod>2024-06-30</lastmod>
+  </sitemap>
+</sitemapindex>

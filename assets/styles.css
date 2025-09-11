@@ -1,0 +1,111 @@
+/* assets/css/styles.css */
+body {
+    font-family: 'PingFang SC', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+header {
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; /* 恢复 header 居中 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center; /* 恢复 main 内容居中 */
+}
+
+footer {
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* 减小间距，从 1rem 改为 0.5rem */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #3498db;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo {
+    height: 80px; /* 增大 logo，从 60px 改为 80px */
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* 响应式设计 */
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.2rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    section {
+        padding: 1.5rem;
+    }
+    .footer-logo {
+        height: 70px;
+    }
+}
+    
