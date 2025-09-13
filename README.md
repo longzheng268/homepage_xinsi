@@ -32,6 +32,7 @@
 | `CNAME`：自定义域名配置（用于 GitHub Pages 或类似平台）。 | `CNAME`: Custom domain config (for GitHub Pages or similar). |
 | `robots.txt`：搜索引擎爬虫规则。 | `robots.txt`: Search engine crawler rules. |
 | `sitemap.xml`：网站地图，便于搜索引擎收录。 | `sitemap.xml`: Sitemap for search engine indexing. |
+| 修复：通过全局设置 `box-sizing: border-box`，解决移动端背景溢出问题。 | Fix: globally set `box-sizing: border-box` to prevent mobile background overflow. |
 
 ## 特色特效 / Special Effects
 

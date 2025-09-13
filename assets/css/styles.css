@@ -1,3 +1,8 @@
+/* 全局设置盒模型，避免移动端宽度溢出 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* 语言切换按钮 */
 .lang-switch-btn {
     position: absolute;
