@@ -1,10 +1,12 @@
 ############################################################
-# 中文: 允许所有搜索引擎访问全站和 /doc/，禁止 /admin/ 和 /private/，指定 sitemap
-# English: Allow all search engines to access the site and /doc/, disallow /admin/ and /private/, specify sitemap
+# 中文: 允许所有搜索引擎访问全站、/doc/、/birthday/ 和 /gesture/，禁止 /admin/ 和 /private/，指定 sitemap
+# English: Allow all search engines to access the site, /doc/, /birthday/ and /gesture/, disallow /admin/ and /private/, specify sitemap
 ############################################################
 User-agent: *
 Allow: /
 Allow: /doc/
+Allow: /birthday/
+Allow: /gesture/
 Disallow: /admin/
 Disallow: /private/
 Sitemap: https://www.lz-0315.com/sitemap.xml

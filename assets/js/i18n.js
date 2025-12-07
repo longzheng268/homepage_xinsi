@@ -10,8 +10,8 @@ const i18nData = {
         studyLogHttp: "学习日志网（http）",
         resourceHttps: "资源镜像站（https，待完善）",
         resourceHttp: "资源镜像站（http）",
-        birthdayHttps: "生日特别页（https）",
-        birthdayHttp: "生日特别页（http）",
+        birthday: "生日特别页（https）",
+        gesture: "AI手势控制粒子系统（https）",
         studyPlan: "学习计划",
         studyTip: "每天进步一点点",
         icp: "陇ICP备2024015550号-1",
@@ -27,8 +27,8 @@ const i18nData = {
         studyLogHttp: "Study Log (http)",
         resourceHttps: "Resource Mirror (https, to be improved)",
         resourceHttp: "Resource Mirror (http)",
-        birthdayHttps: "Birthday Special (https)",
-        birthdayHttp: "Birthday Special (http)",
+        birthday: "Birthday Special https)",
+        gesture: "AI Gesture-Controlled Particle System (https)",
         studyPlan: "Study Plan",
         studyTip: "Make a little progress every day",
         icp: "ICP 2024015550-1",
@@ -65,8 +65,8 @@ function renderLang(lang) {
     document.getElementById('i18n-studylog-http').textContent = d.studyLogHttp;
     document.getElementById('i18n-resource-https').textContent = d.resourceHttps;
     document.getElementById('i18n-resource-http').textContent = d.resourceHttp;
-    document.getElementById('i18n-birthday-https').textContent = d.birthdayHttps;
-    document.getElementById('i18n-birthday-http').textContent = d.birthdayHttp;
+    document.getElementById('i18n-birthday').textContent = d.birthday;
+    document.getElementById('i18n-gesture').textContent = d.gesture;
     // footer logo alt
     document.getElementById('footer-logo').alt = d.footer;
 }
@@ -74,7 +74,7 @@ function renderLang(lang) {
 window.addEventListener('DOMContentLoaded', () => {
     const lang = getLang();
     renderLang(lang);
-    document.getElementById('i18n-lang-switch').onclick = function() {
+    document.getElementById('i18n-lang-switch').onclick = function () {
         const newLang = getLang() === 'zh' ? 'en' : 'zh';
         setLang(newLang);
     };
@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-toggle');
     const menuList = document.getElementById('menu-list');
     let menuOpen = false;
-    menuBtn.onclick = function() {
+    menuBtn.onclick = function () {
         menuOpen = !menuOpen;
         menuList.style.display = menuOpen ? 'flex' : 'none';
         menuBtn.textContent = menuOpen ? '📂 ' + i18nData[getLang()].menuCollapse : '📂 ' + i18nData[getLang()].menu;

@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  中文：本 sitemap 用于搜索引擎收录主页、生日页、学习日志等主要页面。
-  English: This sitemap is for search engines to index homepage, birthday page, study log, etc.
+  中文：本 sitemap 用于搜索引擎收录主页、生日页、手势控制粒子系统、学习日志等主要页面。
+  English: This sitemap is for search engines to index homepage, birthday page, gesture-controlled particle system, study log, etc.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.lz-0315.com/</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-12-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://birthday.lz-0315.com/</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-12-07</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gesture.lz-0315.com/</loc>
+    <lastmod>2025-12-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
