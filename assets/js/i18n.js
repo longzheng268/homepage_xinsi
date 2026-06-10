@@ -6,12 +6,11 @@ const i18nData = {
         subtitle: "记录每一天的学习历程",
         menu: "目录",
         menuCollapse: "收起目录",
-        studyLogHttps: "学习日志网（https，待完善）",
-        studyLogHttp: "学习日志网（http）",
-        resourceHttps: "资源镜像站（https，待完善）",
-        resourceHttp: "资源镜像站（http）",
+        studyLogHttps: "学习日志网（https）",
+        resourceHttps: "资源镜像站（https）",
         birthday: "生日特别页（https）",
         gesture: "AI手势控制粒子系统（https）",
+        airwriting: "手势隔空写字（https）",
         studyPlan: "学习计划",
         studyTip: "每天进步一点点",
         icp: "陇ICP备2024015550号-1",
@@ -23,12 +22,11 @@ const i18nData = {
         subtitle: "Record your daily learning journey",
         menu: "Menu",
         menuCollapse: "Collapse Menu",
-        studyLogHttps: "Study Log (https, to be improved)",
-        studyLogHttp: "Study Log (http)",
-        resourceHttps: "Resource Mirror (https, to be improved)",
-        resourceHttp: "Resource Mirror (http)",
+        studyLogHttps: "Study Log (https)",
+        resourceHttps: "Resource Mirror (https)",
         birthday: "Birthday Special https)",
         gesture: "AI Gesture-Controlled Particle System (https)",
+        airwriting: "Air Writing (https)",
         studyPlan: "Study Plan",
         studyTip: "Make a little progress every day",
         icp: "ICP 2024015550-1",
@@ -62,11 +60,10 @@ function renderLang(lang) {
     document.getElementById('i18n-lang-switch').textContent = d.langSwitch;
     // 菜单链接
     document.getElementById('i18n-studylog-https').textContent = d.studyLogHttps;
-    document.getElementById('i18n-studylog-http').textContent = d.studyLogHttp;
     document.getElementById('i18n-resource-https').textContent = d.resourceHttps;
-    document.getElementById('i18n-resource-http').textContent = d.resourceHttp;
     document.getElementById('i18n-birthday').textContent = d.birthday;
     document.getElementById('i18n-gesture').textContent = d.gesture;
+    document.getElementById('i18n-airwriting').textContent = d.airwriting;
     // footer logo alt
     document.getElementById('footer-logo').alt = d.footer;
 }
