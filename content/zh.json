@@ -1,0 +1,380 @@
+{
+  "profile": {
+    "name": "辛巳",
+    "title": "辛巳学习日志网",
+    "subtitle": "记录每一天的学习历程",
+    "bio": "嵌入式与AI爱好者，玩树莓派和ARM单片机长大，顺手搞搞航拍。折腾过深度学习模型训练、机器人控制系统、光伏运维平台，也拿SolidWorks画过机械结构。在\"互联网+\"和大创项目里摸爬滚打。代码能写（C/C++、Python、Java），天上能飞（航拍），地上能跑（机器人）。",
+    "avatar": "assets/img/头像.png",
+    "social": [
+      {
+        "name": "Gravatar",
+        "url": "https://gravatar.com/longzheng0315",
+        "icon": "gravatar"
+      },
+      {
+        "name": "ORCID",
+        "url": "https://orcid.org/0009-0009-1230-2608",
+        "icon": "orcid"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/longzheng268",
+        "icon": "github"
+      }
+    ]
+  },
+  "quicklinks": [
+    {
+      "icon": "📖",
+      "name": "学习日志网（https）",
+      "url": "https://doc.lz-0315.com/"
+    },
+    {
+      "icon": "🗂️",
+      "name": "资源镜像站（https）",
+      "url": "https://clouddisk.lz-0315.com"
+    },
+    {
+      "icon": "🎂",
+      "name": "生日特别页（https）",
+      "url": "https://birthday.lz-0315.com/",
+      "cls": "birthday"
+    },
+    {
+      "icon": "🌌",
+      "name": "AI手势控制粒子系统（https）",
+      "url": "https://gesture.lz-0315.com/"
+    },
+    {
+      "icon": "✍️",
+      "name": "手势隔空写字（https）",
+      "url": "https://airwriting.lz-0315.com/"
+    }
+  ],
+  "about": {
+    "bio": "嵌入式与AI爱好者，玩树莓派和ARM单片机长大，顺手搞搞航拍。折腾过深度学习模型训练、机器人控制系统、光伏运维平台，也拿SolidWorks画过机械结构。在\"互联网+\"和大创项目里摸爬滚打。代码能写（C/C++、Rust、Python、Kotlin、Java、Node.js），天上能飞（航拍），地上能跑（机器人）。",
+    "details": [
+      {
+        "icon": "💻",
+        "text": "C/C++ · Rust · Python · Kotlin · Java · Node.js"
+      },
+      {
+        "icon": "🤖",
+        "text": "ROS自主导航 · 嵌入式GNU/Linux"
+      },
+      {
+        "icon": "🧠",
+        "text": "AI Agent · 大模型应用开发"
+      },
+      {
+        "icon": "📄",
+        "text": "科研论文 · EI会议/期刊论文发表"
+      },
+      {
+        "icon": "📷",
+        "text": "航拍爱好者"
+      }
+    ],
+    "skills": [
+      {
+        "icon": "🤖",
+        "name": "嵌入式与AI",
+        "desc": "树莓派、ARM单片机、嵌入式GNU/Linux"
+      },
+      {
+        "icon": "🧠",
+        "name": "人工智能",
+        "desc": "深度学习模型训练、卷积神经网络（Python）"
+      },
+      {
+        "icon": "🤖",
+        "name": "AI Agent",
+        "desc": "大模型应用开发、RAG、LangChain、智能体编排"
+      },
+      {
+        "icon": "📄",
+        "name": "科研创新",
+        "desc": "EI会议论文、期刊论文发表，大数据挖掘与机器学习研究"
+      },
+      {
+        "icon": "🦾",
+        "name": "机器人技术",
+        "desc": "ROS自主导航、机器人控制系统"
+      },
+      {
+        "icon": "🚁",
+        "name": "航拍",
+        "desc": "有航拍作品（抖音）"
+      },
+      {
+        "icon": "💻",
+        "name": "软件开发",
+        "desc": "C/C++、Rust、Python、Kotlin、Java、Node.js"
+      },
+      {
+        "icon": "⚙️",
+        "name": "机械建模",
+        "desc": "SolidWorks"
+      },
+      {
+        "icon": "🚀",
+        "name": "创新创业",
+        "desc": "\"互联网+\"、大创项目"
+      }
+    ],
+    "copyrights": [
+      "肥料及农药供给配比控制系统V1.0",
+      "一种光伏电站智能运维平台配套APP V1.0",
+      "农田土壤无线检测系统V1.0",
+      "作物生长情况检测平台V1.0",
+      "基于深度学习的植物叶片分割及分类系统V1.0",
+      "光伏电站可移动运维机器人控制系统V1.0"
+    ],
+    "patents": [
+      {
+        "status": "granted",
+        "statusText": "已申请",
+        "text": "一种水肥混合喷洒装置"
+      },
+      {
+        "status": "granted",
+        "statusText": "已申请",
+        "text": "工艺品（会师号羊皮筏）外观设计专利"
+      }
+    ],
+    "research": [
+      {
+        "icon": "🏆",
+        "title": "国家级大创项目",
+        "desc": "驾驶先驱——基于ROS的自主导航室外无人车"
+      },
+      {
+        "icon": "📄",
+        "title": "论文发表",
+        "desc": "《基于语义分割的异构多核平台大数据挖掘算法》，发表于《大数据与人工智能》期刊，第一作者"
+      },
+      {
+        "icon": "📄",
+        "title": "EI会议论文",
+        "desc": "《基于高斯动力学与机器学习的网球动量分析方法》，ADMIT 2024，EI索引"
+      },
+      {
+        "icon": "💰",
+        "title": "励志奖学金",
+        "desc": "多次获得"
+      }
+    ],
+    "awards": {
+      "national": [
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2023全国高校精英挑战赛创新创业竞赛\"云泽杯\"营销模拟决策赛道全国总决赛 一等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "2023第十一届全国大学生数字媒体科技作品及创意竞赛：植保无人机及高效发电巡航平台 三等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "\"中国中车杯\"第六届全国大学生可再生能源优秀科技作品竞赛 三等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "全国大学生智能汽车竞赛 三等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "睿抗机器人开发者大赛(RAICOM)魔力元宝赛项 三等奖"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "第二十六届中国机器人及人工智能大赛全国总决赛：荀鹤——智能语音家电控制系统 二等奖"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "第二十六届中国机器人及人工智能大赛全国总决赛：黄河红韵—党史传承与流域文化融合之旅 二等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "第十七届\"高教杯\"全国大学生先进成图技术与产品信息建模创新大赛 三等奖"
+        }
+      ],
+      "province": [
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "第九届中国国际\"互联网+\"大学生创新创业大赛：宇凌智能 甘肃省金奖"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "第十六届全国大学生节能减排社会实践与科技竞赛 甘肃省二等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "第十届\"大唐杯\"全国大学生移动通信5G技术大赛 甘肃省三等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "第十八届全国智能汽车大赛创意组讯飞组 西北赛区三等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "2023第十一届全国大学生数字媒体科技作品及创意竞赛：会师号羊皮皮筏红色文化周边造型设计 西北赛区三等奖"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "睿抗机器人开发者大赛(RAICOM)魔力元宝赛项 甘肃省一等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "第十七届全国大学生先进成图技术与产品信息建模创新大赛甘肃赛区 三等奖"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "中国国际大学生创新大赛（2024）：追声捕影——变电站换流站全天候立体式智能巡检开创者 校级金奖"
+        }
+      ],
+      "school": [
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2022年\"纪念一二九，传递爱国情\"活动 一等奖"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "\"喜迎二十大 青春著华章\"主题活动 一等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "第九届中国国际\"互联网+\"大学生创新创业大赛：全年舒适空调新方案 校赛三等奖"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "第十四届全国大学生电子商务\"创新、创意及创业\"挑战赛：红柳智农 一等奖"
+        },
+        {
+          "level": "honorable",
+          "medal": "🏅",
+          "text": "第七届中国高校智能机器人创意大赛主题三 优秀奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "第六届中国高校智能机器人创意大赛 三等奖"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "2023-2024华为ICT大赛校赛实践赛网络赛道 二等奖"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "2023年全国大学生生命科学竞赛 二等奖"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "2023年全国高校商业精英挑战赛创新创业竞赛创业计划赛道 二等奖"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2024年全国大学生信息安全竞赛创新实践能力赛 一等奖"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "甘肃省大学生区块链技术创新与应用大赛 三等奖"
+        }
+      ]
+    }
+  },
+  "friends": [
+    {
+      "name": "QuickAPI",
+      "url": "https://api.quickapi.store/",
+      "icon": "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAERkwtpr5OSMyIHAas1e5KaWsAY_ujJcAAC5R4AAnZPeFVSlujQkXQDjToE.png"
+    }
+  ],
+  "contact": [
+    {
+      "icon": "🐙",
+      "name": "GitHub",
+      "url": "https://github.com/longzheng268"
+    },
+    {
+      "icon": "🆔",
+      "name": "ORCID",
+      "url": "https://orcid.org/0009-0009-1230-2608"
+    },
+    {
+      "icon": "🔗",
+      "name": "Gravatar",
+      "url": "https://gravatar.com/longzheng0315"
+    },
+    {
+      "icon": "📧",
+      "name": "Email",
+      "url": "mailto:longzheng0315@gmail.com"
+    }
+  ],
+  "sites": [
+    {
+      "icon": "📖",
+      "name": "学习日志网",
+      "url": "https://doc.lz-0315.com/",
+      "desc": "日常学习笔记与知识沉淀"
+    },
+    {
+      "icon": "🗂️",
+      "name": "资源镜像站",
+      "url": "https://clouddisk.lz-0315.com",
+      "desc": "开源资源镜像与下载服务"
+    },
+    {
+      "icon": "🎂",
+      "name": "生日特别页",
+      "url": "https://birthday.lz-0315.com/",
+      "desc": "特别的生日纪念页面"
+    },
+    {
+      "icon": "🌌",
+      "name": "AI手势控制粒子系统",
+      "url": "https://gesture.lz-0315.com/",
+      "desc": "基于AI的手势识别与粒子交互"
+    },
+    {
+      "icon": "✍️",
+      "name": "手势隔空写字",
+      "url": "https://airwriting.lz-0315.com/",
+      "desc": "空中手势识别与文字输入"
+    }
+  ],
+  "footer": {
+    "icp": "陇ICP备2024015550号-1",
+    "icpUrl": "https://beian.miit.gov.cn/",
+    "upyun": {
+      "logo": "assets/img/upyun_logo.svg",
+      "url": "https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"
+    }
+  }
+}

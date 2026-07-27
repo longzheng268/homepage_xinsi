@@ -1,176 +1,497 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="i18n-title">辛巳学习日志网</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/i18n.js"></script>
-    <!-- 标签页图标 -->
-    <link rel="icon" type="image/png" href="assets/img/头像.png">
-    <!-- 新增按钮样式 -->
-    <style>
-        .birthday-button {
-            display: inline-block;
-            padding: 12px 30px;
-            margin: 30px 0;
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .birthday-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-        }
-
-        @media (max-width: 480px) {
-            .birthday-button {
-                padding: 10px 25px;
-                font-size: 14px;
-                margin: 20px 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>辛巳学习日志网</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/img/头像.png">
 </head>
+<body data-theme="dark">
+  <div class="lidar-scan"></div>
+  <div class="scanline"></div>
 
-<body>
-    <header>
-        <h1 id="i18n-title">辛巳学习日志网</h1>
-        <p id="i18n-subtitle">记录每一天的学习历程</p>
-        <button id="i18n-lang-switch" class="lang-switch-btn">English</button>
-    </header>
-
-    <!-- 主页目录卡片区 -->
-    <div class="home-menu-card">
-        <div class="menu-avatar-wrap">
-            <img src="assets/img/头像.png" alt="我的头像" class="menu-avatar">
-        </div>
-        <div class="menu-content-wrap">
-            <button id="menu-toggle" class="menu-toggle-btn">📂 目录</button>
-            <div id="menu-list" class="menu-list">
-                <div class="menu-item">
-                    <span class="menu-emoji">📖</span>
-                    <a id="i18n-studylog-https" href="https://doc.lz-0315.com/" target="_blank" rel="noopener"
-                        class="menu-link">学习日志网（https）</a>
-                </div>
-                <div class="menu-item">
-                    <span class="menu-emoji">🗂️</span>
-                    <a id="i18n-resource-https" href="https://clouddisk.lz-0315.com" target="_blank" rel="noopener"
-                        class="menu-link">资源镜像站（https）</a>
-                </div>
-                <div class="menu-item">
-                    <span class="menu-emoji">🎂</span>
-                    <a id="i18n-birthday" href="https://birthday.lz-0315.com/" target="_blank" rel="noopener"
-                        class="menu-link birthday-link">生日特别页（https）</a>
-                </div>
-                <div class="menu-item">
-                    <span class="menu-emoji">🌌</span>
-                    <a id="i18n-gesture" href="https://gesture.lz-0315.com/" target="_blank" rel="noopener"
-                        class="menu-link">AI手势控制粒子系统（https）</a>
-                </div>
-                <div class="menu-item">
-                    <span class="menu-emoji">✍️</span>
-                    <a id="i18n-airwriting" href="https://airwriting.lz-0315.com/" target="_blank" rel="noopener"
-                        class="menu-link">手势隔空写字（https）</a>
-                </div>
-            </div>
-        </div>
+  <!-- Floating Background Characters -->
+  <div class="bg-characters">
+    <!-- GNU Mascot -->
+    <div class="bg-char bg-gnu">
+      <svg viewBox="0 0 100 100" fill="currentColor">
+        <path d="M50 12c-8 0-14 4-17 10-2 0-4 1-6 2-3 2-5 5-6 8-1 4-1 8 1 12 1 3 3 5 6 7-1 3-1 5-1 8 0 4 1 7 3 11s5 7 9 9c3 2 7 3 11 3 6 0 11-2 15-5 3-3 5-7 5-12 0-3-1-6-3-9 2-2 4-4 5-7 2-4 2-8 1-12-1-3-3-6-6-8-2-1-4-2-6-2-3-6-9-10-17-10zm-3 8c4 0 7 2 9 5l2 4 4 1c2 0 4 1 5 3 2 2 2 5 1 7-1 2-3 4-5 4h-3l-1 3c0 3-2 5-5 7l-4 3 1 4c1 2 3 3 5 3 3 0 6-1 8-3s3-5 3-8c0-2-1-4-2-6l3-2c3 0 5-2 6-4s1-4 0-6c-1-1-2-2-4-3l-3-1-1-3c-2-3-5-5-8-5-2 0-4 1-6 2l-2 3-3-2c-2-1-4-2-6-2-3 0-6 2-8 4l-3 3-3-1c-2-1-3-1-5-1-1 3-1 5 0 7 1 1 2 2 4 3h3l1 3c0 2 1 4 3 6l3 3v4c0 3 1 5 3 7 1 2 4 3 6 3 4 0 7-1 9-4 2-2 3-5 3-8v-4l4-3c2-1 4-3 5-6l1-4h-4c-2 0-4-1-5-3-2-2-2-4-1-6 1-3 3-5 5-6l4-1 1-4c2-3 5-5 9-5z"/>
+        <circle cx="42" cy="40" r="3" fill="var(--bg-deep)"/>
+        <circle cx="58" cy="40" r="3" fill="var(--bg-deep)"/>
+      </svg>
     </div>
-    <script>
-        // ...菜单展开收起逻辑已集成到 i18n.js ...
-    </script>
 
-    <main>
-        <section>
-            <h2 id="i18n-study-plan">学习计划</h2>
-            <p id="i18n-study-tip">每天进步一点点</p>
-        </section>
-    </main>
+    <!-- Tux the Penguin -->
+    <div class="bg-char bg-tux">
+      <svg viewBox="0 0 100 100" fill="currentColor">
+        <ellipse cx="50" cy="55" rx="25" ry="30"/>
+        <ellipse cx="50" cy="58" rx="18" ry="22" fill="#fff"/>
+        <ellipse cx="50" cy="30" rx="18" ry="16"/>
+        <ellipse cx="50" cy="32" rx="12" ry="10" fill="#fff"/>
+        <ellipse cx="44" cy="30" rx="3" ry="4"/>
+        <ellipse cx="56" cy="30" rx="3" ry="4"/>
+        <ellipse cx="45" cy="29" rx="1" ry="1.5" fill="#fff"/>
+        <ellipse cx="57" cy="29" rx="1" ry="1.5" fill="#fff"/>
+        <path d="M46 36h8l-4 6z" fill="#f90"/>
+        <ellipse cx="50" cy="75" rx="8" ry="5" fill="#f90"/>
+        <ellipse cx="28" cy="50" rx="8" ry="4" transform="rotate(-20 28 50)"/>
+        <ellipse cx="72" cy="50" rx="8" ry="4" transform="rotate(20 72 50)"/>
+        <ellipse cx="38" cy="82" rx="6" ry="3" fill="#f90" transform="rotate(-15 38 82)"/>
+        <ellipse cx="62" cy="82" rx="6" ry="3" fill="#f90" transform="rotate(15 62 82)"/>
+      </svg>
+    </div>
 
-    <footer>
-        <div class="footer-content">
-            <p>
-                <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" id="i18n-icp">陇ICP备2024015550号-1</a>
-            </p>
-            <div class="logo-container">
-                <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">
-                    <img id="footer-logo" src="assets/img/upyun_logo.svg" alt="又拍云" class="footer-logo">
-                </a>
+    <!-- Drone -->
+    <div class="bg-char bg-drone">
+      <svg viewBox="0 0 100 100" fill="currentColor">
+        <line x1="15" y1="20" x2="35" y2="40" stroke="currentColor" stroke-width="2"/>
+        <line x1="85" y1="20" x2="65" y2="40" stroke="currentColor" stroke-width="2"/>
+        <line x1="15" y1="60" x2="35" y2="45" stroke="currentColor" stroke-width="2"/>
+        <line x1="85" y1="60" x2="65" y2="45" stroke="currentColor" stroke-width="2"/>
+        <ellipse cx="33" cy="38" rx="10" ry="3" opacity="0.5">
+          <animateTransform attributeName="transform" type="rotate" from="0 33 38" to="360 33 38" dur="0.3s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="67" cy="38" rx="10" ry="3" opacity="0.5">
+          <animateTransform attributeName="transform" type="rotate" from="0 67 38" to="360 67 38" dur="0.3s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="33" cy="62" rx="10" ry="3" opacity="0.5">
+          <animateTransform attributeName="transform" type="rotate" from="0 33 62" to="360 33 62" dur="0.3s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="67" cy="62" rx="10" ry="3" opacity="0.5">
+          <animateTransform attributeName="transform" type="rotate" from="0 67 62" to="360 67 62" dur="0.3s" repeatCount="indefinite"/>
+        </ellipse>
+        <rect x="38" y="38" width="24" height="20" rx="4"/>
+        <circle cx="50" cy="48" r="5"/>
+        <circle cx="50" cy="48" r="2" fill="#f44"/>
+        <rect x="42" y="58" width="16" height="3" rx="1"/>
+      </svg>
+    </div>
+
+    <!-- Robot Dog -->
+    <div class="bg-char bg-robot-dog">
+      <svg viewBox="0 0 100 100" fill="currentColor">
+        <rect x="25" y="40" width="45" height="20" rx="5"/>
+        <rect x="65" y="35" width="18" height="16" rx="4"/>
+        <circle cx="78" cy="42" r="3" fill="#0f0"/>
+        <rect x="28" y="60" width="6" height="18" rx="2">
+          <animateTransform attributeName="transform" type="rotate" values="0 31 60;15 31 60;0 31 60;-15 31 60;0 31 60" dur="0.8s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="40" y="60" width="6" height="18" rx="2">
+          <animateTransform attributeName="transform" type="rotate" values="0 43 60;-15 43 60;0 43 60;15 43 60;0 43 60" dur="0.8s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="52" y="60" width="6" height="18" rx="2">
+          <animateTransform attributeName="transform" type="rotate" values="0 55 60;15 55 60;0 55 60;-15 55 60;0 55 60" dur="0.8s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="64" y="60" width="6" height="18" rx="2">
+          <animateTransform attributeName="transform" type="rotate" values="0 67 60;-15 67 60;0 67 60;15 67 60;0 67 60" dur="0.8s" repeatCount="indefinite"/>
+        </rect>
+        <path d="M 22 42 Q 15 35 18 28" stroke="currentColor" stroke-width="3" fill="none"/>
+        <rect x="68" y="30" width="12" height="5" rx="2"/>
+      </svg>
+    </div>
+
+    <!-- Humanoid Robot -->
+    <div class="bg-char bg-robot">
+      <svg viewBox="0 0 100 100" fill="currentColor">
+        <rect x="38" y="15" width="24" height="20" rx="5"/>
+        <rect x="42" y="20" width="6" height="4" rx="1" fill="#0f0"/>
+        <rect x="52" y="20" width="6" height="4" rx="1" fill="#0f0"/>
+        <rect x="44" y="28" width="12" height="3" rx="1"/>
+        <line x1="50" y1="15" x2="50" y2="8" stroke="currentColor" stroke-width="2"/>
+        <circle cx="50" cy="7" r="2" fill="#f44"/>
+        <rect x="35" y="37" width="30" height="28" rx="4"/>
+        <circle cx="50" cy="50" r="6" fill="#0f0"/>
+        <rect x="25" y="40" width="8" height="22" rx="3"/>
+        <rect x="67" y="40" width="8" height="22" rx="3"/>
+        <rect x="38" y="67" width="9" height="20" rx="3"/>
+        <rect x="53" y="67" width="9" height="20" rx="3"/>
+      </svg>
+    </div>
+
+    <!-- Cowsay Cow -->
+    <div class="bg-char bg-cow">
+      <svg viewBox="0 0 120 80" fill="currentColor">
+        <ellipse cx="60" cy="50" rx="30" ry="18"/>
+        <ellipse cx="50" cy="45" rx="8" ry="6" fill="#333"/>
+        <ellipse cx="72" cy="52" rx="6" ry="5" fill="#333"/>
+        <ellipse cx="25" cy="38" rx="14" ry="12"/>
+        <ellipse cx="25" cy="38" rx="10" ry="8" fill="#ffb6c1"/>
+        <circle cx="20" cy="35" r="2.5"/>
+        <circle cx="30" cy="35" r="2.5"/>
+        <circle cx="20.5" cy="34.5" r="0.8" fill="#fff"/>
+        <circle cx="30.5" cy="34.5" r="0.8" fill="#fff"/>
+        <ellipse cx="25" cy="42" rx="5" ry="3" fill="#ffb6c1"/>
+        <circle cx="23" cy="42" r="0.8"/>
+        <circle cx="27" cy="42" r="0.8"/>
+        <ellipse cx="15" cy="28" rx="5" ry="3" transform="rotate(-30 15 28)"/>
+        <ellipse cx="35" cy="28" rx="5" ry="3" transform="rotate(30 35 28)"/>
+        <path d="M18 28 Q15 22 20 20" stroke="#daa520" stroke-width="2" fill="none"/>
+        <path d="M32 28 Q35 22 30 20" stroke="#daa520" stroke-width="2" fill="none"/>
+        <rect x="40" y="62" width="5" height="14" rx="2"/>
+        <rect x="50" y="62" width="5" height="14" rx="2"/>
+        <rect x="65" y="62" width="5" height="14" rx="2"/>
+        <rect x="75" y="62" width="5" height="14" rx="2"/>
+        <ellipse cx="60" cy="66" rx="6" ry="4" fill="#ffb6c1"/>
+        <path d="M90 45 Q95 40 92 35" stroke="currentColor" stroke-width="2" fill="none"/>
+        <circle cx="92" cy="34" r="2" fill="#333"/>
+        <rect x="5" y="5" width="50" height="18" rx="4" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+        <text x="12" y="17" font-size="6" fill="rgba(255,255,255,0.5)" font-family="monospace">I use Arch!</text>
+      </svg>
+    </div>
+
+    <!-- SL Steam Locomotive -->
+    <div class="bg-char bg-sl">
+      <svg viewBox="0 0 150 70" fill="currentColor">
+        <circle cx="25" cy="15" r="5" opacity="0.5">
+          <animate attributeName="cy" values="15;10;5" dur="1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0.2;0" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="30" cy="12" r="4" opacity="0.4">
+          <animate attributeName="cy" values="12;7;2" dur="1.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0.15;0" dur="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <rect x="20" y="18" width="10" height="12" rx="1"/>
+        <rect x="30" y="22" width="60" height="20" rx="4"/>
+        <rect x="30" y="22" width="60" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="1"/>
+        <line x1="45" y1="22" x2="45" y2="42" stroke="currentColor" stroke-width="1"/>
+        <line x1="60" y1="22" x2="60" y2="42" stroke="currentColor" stroke-width="1"/>
+        <line x1="75" y1="22" x2="75" y2="42" stroke="currentColor" stroke-width="1"/>
+        <rect x="90" y="12" width="30" height="30" rx="2"/>
+        <rect x="94" y="16" width="10" height="8" rx="1" fill="#87ceeb" opacity="0.6"/>
+        <rect x="108" y="16" width="10" height="8" rx="1" fill="#87ceeb" opacity="0.6"/>
+        <polygon points="0,42 15,42 10,50 0,50"/>
+        <circle cx="25" cy="48" r="7" stroke="currentColor" stroke-width="2"/>
+        <circle cx="50" cy="48" r="7" stroke="currentColor" stroke-width="2"/>
+        <circle cx="75" cy="48" r="7" stroke="currentColor" stroke-width="2"/>
+        <circle cx="100" cy="48" r="7" stroke="currentColor" stroke-width="2"/>
+        <circle cx="120" cy="48" r="7" stroke="currentColor" stroke-width="2"/>
+        <line x1="25" y1="41" x2="25" y2="55" stroke="currentColor" stroke-width="0.5"/>
+        <line x1="18" y1="48" x2="32" y2="48" stroke="currentColor" stroke-width="0.5"/>
+        <line x1="50" y1="41" x2="50" y2="55" stroke="currentColor" stroke-width="0.5"/>
+        <line x1="43" y1="48" x2="57" y2="48" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="8" cy="34" r="4" fill="#ff0" opacity="0.8"/>
+        <line x1="25" y1="48" x2="50" y2="48" stroke="currentColor" stroke-width="2"/>
+        <line x1="50" y1="48" x2="75" y2="48" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- Toilet -->
+    <div class="bg-char bg-toilet">
+      <svg viewBox="0 0 60 70" fill="currentColor">
+        <rect x="12" y="5" width="36" height="18" rx="3"/>
+        <rect x="15" y="8" width="30" height="12" rx="2" fill="#eee"/>
+        <rect x="44" y="10" width="8" height="3" rx="1"/>
+        <ellipse cx="30" cy="42" rx="22" ry="18"/>
+        <ellipse cx="30" cy="42" rx="18" ry="14" fill="#ccc"/>
+        <ellipse cx="30" cy="40" rx="14" ry="10" fill="#87ceeb" opacity="0.4"/>
+        <ellipse cx="30" cy="58" rx="12" ry="4"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand rainbow-text" id="nav-brand">辛巳学习日志网</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link" data-section="hero">首页</a></li>
+        <li><a href="#sites" class="nav-link" data-section="sites">网站导航</a></li>
+        <li><a href="#friends" class="nav-link" data-section="friends">友联</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">关于我</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">联系方式</a></li>
+        <li><button id="lang-switch" class="lang-switch-btn">English</button></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Theme">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content - 自然滚动布局 -->
+  <main id="main-content">
+
+    <!-- Section 0: Hero - 终端 + 关于我 -->
+    <section class="section hero-section" id="hero">
+      <div class="section-container">
+        <div class="hero-grid">
+          <!-- 左侧：关于我 (手机在上) -->
+          <div class="hero-about">
+            <div class="about-card">
+              <div class="about-card-header">
+                <span class="mac-dot mac-dot-red"></span>
+                <span class="mac-dot mac-dot-yellow"></span>
+                <span class="mac-dot mac-dot-green"></span>
+                <span class="about-card-title">about.sh</span>
+              </div>
+              <div class="about-card-body">
+                <div class="about-avatar">
+                  <img src="assets/img/头像.png" alt="avatar">
+                </div>
+                <p class="hero-about-bio"></p>
+                <div class="hero-about-details"></div>
+              </div>
             </div>
+          </div>
+
+          <!-- 右侧：Arch 终端 (手机在下) -->
+          <div class="hero-terminal">
+            <div class="arch-terminal">
+              <div class="mac-window-titlebar">
+                <span class="mac-dot mac-dot-red"></span>
+                <span class="mac-dot mac-dot-yellow"></span>
+                <span class="mac-dot mac-dot-green"></span>
+                <span class="mac-window-title">fish — xinsi@archlinux</span>
+              </div>
+              <div class="arch-terminal-body">
+                <div class="neofetch-row">
+                  <div class="neofetch-logo-side fade-in">
+                    <pre class="arch-logo">                   -`
+                      .o+/
+                     `ooo/
+                    `+oooo:
+                   `+oooooo:
+                   -+oooooo+:
+                 `/:-:++oooo+:
+                `/++++/+++++++:
+               `/++++++++++++++:
+              `/+++ooooooooooooo/`
+             ./ooosssso++osssssso+`
+            .osssssso/````ossssss+`
+           -osssssso+/+++++++++/-
+          `/osssssso+.     `+sssoo+/
+         `/osssssso.        `+sssoo+/`
+        `/osssssso.           `+ssso.`
+       `/osssssso.               `://`
+      `/sooooooo.
+     `/osssssso.
+    `/ossssssso.
+    /+osssssss+/
+    `/+ossssso/`
+      `/+oo+/`
+         ```</pre>
+                  </div>
+                  <div class="neofetch-info-side">
+                    <div class="nf-line nf-header-row fade-in">
+                      <span class="nf-highlight">xinsi</span>@<span class="nf-highlight">archlinux</span>
+                      <img src="assets/img/头像.png" alt="avatar" class="terminal-avatar-inline" id="terminal-avatar">
+                    </div>
+                    <div class="nf-line fade-in" style="color:#1793d1">--------------------</div>
+                    <div class="nf-line fade-in"><span class="nf-label">OS:</span> <span class="nf-value" id="nf-os">Arch Linux x86_64</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Host:</span> <span class="nf-value" id="nf-host">辛巳</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Kernel:</span> <span class="nf-value" id="nf-kernel">embedded-ai 1.0</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Shell:</span> <span class="nf-value" id="nf-shell">fish 3.7</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Resolution:</span> <span class="nf-value" id="nf-res">1920x1080 (OLED)</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Terminal:</span> <span class="nf-value" id="nf-term">kitty</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">CPU:</span> <span class="nf-value" id="nf-cpu">Raspberry Pi 4B (ARM)</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">GPU:</span> <span class="nf-value" id="nf-gpu">NVIDIA Jetson Nano</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Memory:</span> <span class="nf-value" id="nf-mem">∞ MB / Always Learning</span></div>
+                    <div class="nf-line fade-in"><span class="nf-label">Interests:</span> <span class="nf-value" id="nf-int">ROS, DL, UAV, Embedded</span></div>
+                    <div class="arch-badge fade-in">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 2.2l8.3 4.6v9.4l-8.3 4.6-8.3-4.6V6.8L12 2.2z"/></svg>
+                      I use Arch btw
+                    </div>
+                  </div>
+                </div>
+                <div class="fish-prompt fade-in">
+                  <span class="fish-user">xinsi</span>
+                  <span class="fish-path">~/homepage</span>
+                  <span class="fish-cmd">cowsay -f arch "I use Arch btw"</span>
+                </div>
+                <div class="cowsay-output fade-in" style="padding: 8px 20px; color: #1793d1; font-size: 0.72rem;">
+                  <pre style="margin:0;font-family:'JetBrains Mono',monospace;line-height:1.3"> &lt; I use Arch btw &gt;
+   \   ^__^
+    \  (oo)\_______
+       (__)\       )\/\
+           ||----w |
+           ||     ||
+</pre>
+                </div>
+                <div class="fish-prompt fade-in">
+                  <span class="fish-user">xinsi</span>
+                  <span class="fish-path">~/homepage</span>
+                  <span class="fish-cmd">echo "更多项目请访问下方网站导航 👇"</span>
+                </div>
+                <div class="fish-prompt fade-in">
+                  <span class="fish-user">xinsi</span>
+                  <span class="fish-path">~/homepage</span>
+                  <span class="fish-cmd">sl <span class="cursor-blink"></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-social" id="hero-social"></div>
+          </div>
         </div>
-    </footer>
+        <a href="#sites" class="hero-scroll-btn">
+          <span id="scroll-label">了解更多</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </a>
+      </div>
+    </section>
 
-    <!-- 鼠标/触摸跟随散花特效 -->
-    <script>
-        // 花瓣颜色，可自定义
-        const petalColors = ['#ff6b6b', '#ff8e8e', '#ffd86b', '#6bffb3', '#6bcaff', '#b36bff', '#ff6bda'];
-        function createPetal(x, y, extra = false) {
-            const petal = document.createElement('div');
-            const size = extra ? Math.random() * 18 + 18 : Math.random() * 12 + 8;
-            petal.style.position = 'fixed';
-            petal.style.left = (x - size / 2) + 'px';
-            petal.style.top = (y - size / 2) + 'px';
-            petal.style.width = size + 'px';
-            petal.style.height = size + 'px';
-            petal.style.pointerEvents = 'none';
-            petal.style.zIndex = 9999;
-            petal.style.borderRadius = '50%';
-            petal.style.opacity = '0.8';
-            petal.style.background = petalColors[Math.floor(Math.random() * petalColors.length)];
-            petal.style.boxShadow = `0 0 8px 2px ${petal.style.background}`;
-            petal.style.transform = `rotate(${Math.random() * 360}deg)`;
-            document.body.appendChild(petal);
-            // 动画消失
-            setTimeout(() => {
-                petal.style.transition = 'all 0.8s cubic-bezier(.4,2,.6,1)';
-                petal.style.opacity = '0';
-                petal.style.transform += ' scale(1.8) translateY(-30px)';
-            }, 30);
-            setTimeout(() => {
-                petal.remove();
-            }, 900);
-        }
-        // 鼠标移动/触摸跟随
-        function scatter(e, extra = false) {
-            let x, y;
-            if (e.touches) {
-                for (let i = 0; i < e.touches.length; i++) {
-                    x = e.touches[i].clientX;
-                    y = e.touches[i].clientY;
-                    createPetal(x, y, extra);
-                }
-            } else {
-                x = e.clientX;
-                y = e.clientY;
-                createPetal(x, y, extra);
-            }
-        }
-        document.addEventListener('mousemove', scatter);
-        document.addEventListener('touchmove', scatter);
-        // 点击/触摸时生成更多粒子
-        function burst(e) {
-            let x, y;
-            if (e.touches) {
-                for (let i = 0; i < e.touches.length; i++) {
-                    x = e.touches[i].clientX;
-                    y = e.touches[i].clientY;
-                    for (let j = 0; j < 12; j++) createPetal(x + Math.random() * 40 - 20, y + Math.random() * 40 - 20, true);
-                }
-            } else {
-                x = e.clientX;
-                y = e.clientY;
-                for (let j = 0; j < 12; j++) createPetal(x + Math.random() * 40 - 20, y + Math.random() * 40 - 20, true);
-            }
-        }
-        document.addEventListener('click', burst);
-        document.addEventListener('touchstart', burst);
-    </script>
+    <!-- Section 1: 网站导航 -->
+    <section class="section sites-section" id="sites">
+      <div class="section-container">
+        <h2 class="section-title" data-reveal id="sites-title">个人网站导航</h2>
+        <p class="section-subtitle" data-reveal id="sites-subtitle">我的在线项目与服务</p>
+        <div class="sites-grid" id="sites-grid"></div>
+      </div>
+    </section>
+
+    <!-- Section 2: 友联 -->
+    <section class="section friends-section" id="friends">
+      <div class="section-container">
+        <h2 class="section-title" data-reveal id="friends-title">友情链接</h2>
+        <p class="section-subtitle" data-reveal id="friends-subtitle">交换友联欢迎联系我</p>
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title">friends.list</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="friends-grid" id="friends-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 关于我 -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <h2 class="section-title" data-reveal id="about-title">关于我</h2>
+
+        <div class="about-content" data-reveal>
+          <div class="about-avatar">
+            <img src="assets/img/头像.png" alt="avatar">
+          </div>
+          <div class="about-text">
+            <p class="about-bio"></p>
+            <div class="about-details"></div>
+          </div>
+        </div>
+
+        <div class="ascii-divider" data-reveal>--- ~~~ --- ~~~ --- ~~~ --- ~~~ ---</div>
+
+        <!-- Skills -->
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title" id="skills-title">技术方向</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="skills-grid" id="skills-grid"></div>
+          </div>
+        </div>
+
+        <div class="ascii-divider" data-reveal>--- ~~~ --- ~~~ --- ~~~ --- ~~~ ---</div>
+
+        <!-- Copyrights + Patents + Research -->
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title" id="copyright-title">软件著作权</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="copyright-list" id="copyright-list"></div>
+          </div>
+        </div>
+
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title" id="patent-title">专利</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="patent-list" id="patent-list"></div>
+          </div>
+        </div>
+
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title" id="research-title">项目与论文</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="research-list" id="research-list"></div>
+          </div>
+        </div>
+
+        <div class="ascii-divider" data-reveal>--- ~~~ --- ~~~ --- ~~~ --- ~~~ ---</div>
+
+        <!-- Awards -->
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title" id="awards-title">竞赛获奖</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="award-subsection">
+              <h3 class="subsection-title award-level-national" id="awards-national">国家级</h3>
+              <div class="award-list" id="award-list-national"></div>
+            </div>
+            <div class="award-subsection">
+              <h3 class="subsection-title award-level-province" id="awards-province">省级/西北赛区</h3>
+              <div class="award-list" id="award-list-province"></div>
+            </div>
+            <div class="award-subsection">
+              <h3 class="subsection-title award-level-school" id="awards-school">校级</h3>
+              <div class="award-list" id="award-list-school"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: 联系方式 -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        <h2 class="section-title" data-reveal id="contact-title">联系方式</h2>
+        <div class="mac-window" data-reveal>
+          <div class="mac-window-titlebar">
+            <span class="mac-dot mac-dot-red"></span>
+            <span class="mac-dot mac-dot-yellow"></span>
+            <span class="mac-dot mac-dot-green"></span>
+            <span class="mac-window-title">contact.sh</span>
+          </div>
+          <div class="mac-window-body">
+            <div class="contact-grid" id="contact-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-content">
+      <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" id="icp-link">陇ICP备2024015550号-1</a></p>
+      <div class="logo-container">
+        <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">
+          <img src="assets/img/upyun_logo.svg" alt="UPYUN" class="footer-logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/petals.js"></script>
 </body>
-
 </html>

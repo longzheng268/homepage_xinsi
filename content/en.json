@@ -1,0 +1,380 @@
+{
+  "profile": {
+    "name": "Xinsi",
+    "title": "Xinsi Study Log",
+    "subtitle": "Record your daily learning journey",
+    "bio": "Embedded & AI enthusiast, grew up with Raspberry Pi & ARM MCU, also into aerial photography",
+    "avatar": "assets/img/头像.png",
+    "social": [
+      {
+        "name": "Gravatar",
+        "url": "https://gravatar.com/longzheng0315",
+        "icon": "gravatar"
+      },
+      {
+        "name": "ORCID",
+        "url": "https://orcid.org/0009-0009-1230-2608",
+        "icon": "orcid"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/longzheng268",
+        "icon": "github"
+      }
+    ]
+  },
+  "quicklinks": [
+    {
+      "icon": "📖",
+      "name": "Study Log (https)",
+      "url": "https://doc.lz-0315.com/"
+    },
+    {
+      "icon": "🗂️",
+      "name": "Resource Mirror (https)",
+      "url": "https://clouddisk.lz-0315.com"
+    },
+    {
+      "icon": "🎂",
+      "name": "Birthday Special (https)",
+      "url": "https://birthday.lz-0315.com/",
+      "cls": "birthday"
+    },
+    {
+      "icon": "🌌",
+      "name": "AI Gesture Particle System (https)",
+      "url": "https://gesture.lz-0315.com/"
+    },
+    {
+      "icon": "✍️",
+      "name": "Air Writing (https)",
+      "url": "https://airwriting.lz-0315.com/"
+    }
+  ],
+  "about": {
+    "bio": "Embedded & AI enthusiast, grew up with Raspberry Pi & ARM MCU, also into aerial photography. Experienced in deep learning model training, robot control systems, and PV O&M platforms. Also drew mechanical structures with SolidWorks. Active in \"Internet+\" and university innovation projects. Can code (C/C++/Rust/Python/Kotlin/Java/Node.js), can fly (aerial photography), can run (robots).",
+    "details": [
+      {
+        "icon": "💻",
+        "text": "C/C++ · Rust · Python · Kotlin · Java · Node.js"
+      },
+      {
+        "icon": "🤖",
+        "text": "ROS Navigation · Embedded GNU/Linux"
+      },
+      {
+        "icon": "🧠",
+        "text": "AI Agent · LLM Application Development"
+      },
+      {
+        "icon": "📄",
+        "text": "Research Papers · EI Conference & Journal Publications"
+      },
+      {
+        "icon": "📷",
+        "text": "Aerial Photography"
+      }
+    ],
+    "skills": [
+      {
+        "icon": "🤖",
+        "name": "Embedded & AI",
+        "desc": "Raspberry Pi, ARM MCUs, Embedded GNU/Linux"
+      },
+      {
+        "icon": "🧠",
+        "name": "Artificial Intelligence",
+        "desc": "Deep Learning, CNN (Python)"
+      },
+      {
+        "icon": "🤖",
+        "name": "AI Agent",
+        "desc": "LLM App Development, RAG, LangChain, Agent Orchestration"
+      },
+      {
+        "icon": "📄",
+        "name": "Research & Innovation",
+        "desc": "EI conference paper, journal publication, big data mining & ML research"
+      },
+      {
+        "icon": "🦾",
+        "name": "Robotics",
+        "desc": "ROS Navigation, Robot Control"
+      },
+      {
+        "icon": "🚁",
+        "name": "Aerial Photography",
+        "desc": "Aerial works (Douyin)"
+      },
+      {
+        "icon": "💻",
+        "name": "Software Dev",
+        "desc": "C/C++, Rust, Python, Kotlin, Java, Node.js"
+      },
+      {
+        "icon": "⚙️",
+        "name": "Mechanical CAD",
+        "desc": "SolidWorks"
+      },
+      {
+        "icon": "🚀",
+        "name": "Innovation",
+        "desc": "\"Internet+\", Projects"
+      }
+    ],
+    "copyrights": [
+      "Fertilizer & Pesticide Ratio Control System V1.0",
+      "PV Smart O&M Platform App V1.0",
+      "Farmland Soil Wireless Detection System V1.0",
+      "Crop Growth Detection Platform V1.0",
+      "Deep Learning Plant Leaf Segmentation & Classification System V1.0",
+      "PV Plant Mobile O&M Robot Control System V1.0"
+    ],
+    "patents": [
+      {
+        "status": "granted",
+        "statusText": "Granted",
+        "text": "A Water-Fertilizer Mixed Spraying Device"
+      },
+      {
+        "status": "granted",
+        "statusText": "Pending",
+        "text": "Craft Art (Huihsi Sheepskin Raft) Design Patent"
+      }
+    ],
+    "research": [
+      {
+        "icon": "🏆",
+        "title": "National Innovation Project",
+        "desc": "Pioneer Driver — ROS-based Autonomous Outdoor UGV"
+      },
+      {
+        "icon": "📄",
+        "title": "Publication",
+        "desc": "Big Data Mining Algorithm on Heterogeneous Multi-core Platform via Semantic Segmentation, published in Big Data & AI, First Author"
+      },
+      {
+        "icon": "📄",
+        "title": "EI Conference Paper",
+        "desc": "A Tennis Momentum Analysis Method Based on Gaussian Dynamics and Machine Learning, ADMIT 2024, EI Indexed"
+      },
+      {
+        "icon": "💰",
+        "title": "Scholarship",
+        "desc": "Multiple awards"
+      }
+    ],
+    "awards": {
+      "national": [
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2023 National College Elite Challenge — Marketing Simulation Decision Track, National Final, First Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "2023 11th National Digital Media Tech & Creative Competition: Plant Protection UAV, Third Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "6th National Renewable Energy Tech Works Competition, Third Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "National Smart Car Competition, Third Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "RAICOM Robot Developer Challenge — Magic Yuanbao, Third Prize"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "26th China Robot & AI Competition Final: Xunhe — Smart Voice Home Appliance Control, Second Prize"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "26th China Robot & AI Competition Final: Yellow River Red Charm — Party History & Culture, Second Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "17th \"Higher Education Cup\" Advanced Drawing & Modeling Innovation Competition, Third Prize"
+        }
+      ],
+      "province": [
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "9th China International \"Internet+\" Innovation Competition: Yuling Intelligent, Gansu Gold Award"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "16th National Energy Conservation & Emission Reduction Competition, Gansu Second Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "10th \"Datang Cup\" 5G Technology Competition, Gansu Third Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "18th National Smart Car Competition Creative Group, Northwest Third Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "11th National Digital Media Competition: Sheepskin Raft Red Culture Design, Northwest Third Prize"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "RAICOM Robot Developer Challenge — Magic Yuanbao, Gansu First Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "17th National Advanced Drawing Competition Gansu Division, Third Prize"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2024 China International Innovation Competition: Sound & Shadow Catcher — Intelligent Inspection Pioneer, University Gold Award"
+        }
+      ],
+      "school": [
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2022 \"Remember Dec 9th\" Patriotic Activity, First Prize"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "\"Welcome 20th Congress\" Theme Activity, First Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "9th \"Internet+\" Innovation Competition: Comfortable AC Solution, University Third Prize"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "14th National E-commerce \"Innovation, Creativity & Entrepreneurship\" Challenge: Red Willow Smart Agri, First Prize"
+        },
+        {
+          "level": "honorable",
+          "medal": "🏅",
+          "text": "7th National Smart Robot Creative Competition Theme 3, Honorable Mention"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "6th National Smart Robot Creative Competition, Third Prize"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "2023-2024 Huawei ICT Competition Network Track, University Second Prize"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "2023 National Life Science Competition, Second Prize"
+        },
+        {
+          "level": "second",
+          "medal": "🥈",
+          "text": "2023 National Business Elite Challenge — Entrepreneurship Plan, Second Prize"
+        },
+        {
+          "level": "first",
+          "medal": "🥇",
+          "text": "2024 National Info Security Competition Innovation Practice, First Prize"
+        },
+        {
+          "level": "third",
+          "medal": "🥉",
+          "text": "Gansu Blockchain Technology Innovation & Application Competition, Third Prize"
+        }
+      ]
+    }
+  },
+  "friends": [
+    {
+      "name": "QuickAPI",
+      "url": "https://api.quickapi.store/",
+      "icon": "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAERkwtpr5OSMyIHAas1e5KaWsAY_ujJcAAC5R4AAnZPeFVSlujQkXQDjToE.png"
+    }
+  ],
+  "contact": [
+    {
+      "icon": "🐙",
+      "name": "GitHub",
+      "url": "https://github.com/longzheng268"
+    },
+    {
+      "icon": "🆔",
+      "name": "ORCID",
+      "url": "https://orcid.org/0009-0009-1230-2608"
+    },
+    {
+      "icon": "🔗",
+      "name": "Gravatar",
+      "url": "https://gravatar.com/longzheng0315"
+    },
+    {
+      "icon": "📧",
+      "name": "Email",
+      "url": "mailto:longzheng0315@gmail.com"
+    }
+  ],
+  "footer": {
+    "icp": "ICP 2024015550-1",
+    "icpUrl": "https://beian.miit.gov.cn/",
+    "upyun": {
+      "logo": "assets/img/upyun_logo.svg",
+      "url": "https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"
+    }
+  },
+  "sites": [
+    {
+      "icon": "📖",
+      "name": "Study Log",
+      "url": "https://doc.lz-0315.com/",
+      "desc": "Daily learning notes & knowledge base"
+    },
+    {
+      "icon": "🗂️",
+      "name": "Resource Mirror",
+      "url": "https://clouddisk.lz-0315.com",
+      "desc": "Open-source resource mirror & download"
+    },
+    {
+      "icon": "🎂",
+      "name": "Birthday Special",
+      "url": "https://birthday.lz-0315.com/",
+      "desc": "Special birthday memorial page"
+    },
+    {
+      "icon": "🌌",
+      "name": "AI Gesture Particles",
+      "url": "https://gesture.lz-0315.com/",
+      "desc": "AI-based gesture recognition & particle interaction"
+    },
+    {
+      "icon": "✍️",
+      "name": "Air Writing",
+      "url": "https://airwriting.lz-0315.com/",
+      "desc": "Air gesture recognition & text input"
+    }
+  ]
+}

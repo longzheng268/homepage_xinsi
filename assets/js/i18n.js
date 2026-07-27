@@ -1,88 +1,118 @@
-// assets/js/i18n.js
+/* ============================================
+   i18n.js - 辛巳学习日志网 国际化管理
+   语言管理文件，通过 content/*.json 获取内容
+   ============================================ */
 
-const i18nData = {
+var I18n = (function() {
+  'use strict';
+
+  // 当前语言
+  var currentLang = 'zh';
+
+  // 内容数据缓存
+  var data = { zh: null, en: null };
+
+  // UI 文本（不在 content JSON 中管理的文本）
+  var ui = {
     zh: {
-        title: "辛巳学习日志网",
-        subtitle: "记录每一天的学习历程",
-        menu: "目录",
-        menuCollapse: "收起目录",
-        studyLogHttps: "学习日志网（https）",
-        resourceHttps: "资源镜像站（https）",
-        birthday: "生日特别页（https）",
-        gesture: "AI手势控制粒子系统（https）",
-        airwriting: "手势隔空写字（https）",
-        studyPlan: "学习计划",
-        studyTip: "每天进步一点点",
-        icp: "陇ICP备2024015550号-1",
-        footer: "又拍云",
-        langSwitch: "English",
+      scrollDown: '了解更多',
+      nav: { home: '首页', about: '关于我', friends: '友联', sites: '网站导航', contact: '联系方式' }
     },
     en: {
-        title: "Xinsi Study Log",
-        subtitle: "Record your daily learning journey",
-        menu: "Menu",
-        menuCollapse: "Collapse Menu",
-        studyLogHttps: "Study Log (https)",
-        resourceHttps: "Resource Mirror (https)",
-        birthday: "Birthday Special https)",
-        gesture: "AI Gesture-Controlled Particle System (https)",
-        airwriting: "Air Writing (https)",
-        studyPlan: "Study Plan",
-        studyTip: "Make a little progress every day",
-        icp: "ICP 2024015550-1",
-        footer: "UPYUN Cloud",
-        langSwitch: "中文",
+      scrollDown: 'Learn More',
+      nav: { home: 'Home', about: 'About', friends: 'Links', sites: 'Sites', contact: 'Contact' }
     }
-};
+  };
 
-function getLang() {
-    const saved = localStorage.getItem('lang');
-    if (saved) return saved;
-    const lang = navigator.language || navigator.userLanguage;
-    return lang.startsWith('zh') ? 'zh' : 'en';
-}
+  // 初始化
+  function init() {
+    var saved = localStorage.getItem('lang');
+    if (saved) {
+      currentLang = saved;
+    } else {
+      var navLang = navigator.language || navigator.userLanguage;
+      currentLang = navLang.startsWith('zh') ? 'zh' : 'en';
+    }
+  }
 
-function setLang(lang) {
+  // 加载内容 JSON
+  function load(callback) {
+    Promise.all([
+      fetch('content/zh.json').then(function(r) { return r.json(); }),
+      fetch('content/en.json').then(function(r) { return r.json(); })
+    ]).then(function(res) {
+      data.zh = res[0];
+      data.en = res[1];
+      if (callback) callback();
+    }).catch(function(e) {
+      console.error('Content load failed:', e);
+    });
+  }
+
+  // 获取内容（支持路径如 'profile.name'）
+  function t(path) {
+    var en = _get(data.en, path);
+    var zh = _get(data.zh, path);
+    if (currentLang === 'zh') return zh != null ? zh : en;
+    return en != null ? en : zh;
+  }
+
+  // 获取 UI 文本
+  function uiText(path) {
+    var parts = path.split('.');
+    var result = ui[currentLang];
+    for (var i = 0; i < parts.length; i++) {
+      if (result && result[parts[i]] != null) {
+        result = result[parts[i]];
+      } else {
+        return null;
+      }
+    }
+    return result;
+  }
+
+  // 对象属性访问
+  function _get(obj, path) {
+    if (!obj) return null;
+    return path.split('.').reduce(function(o, k) {
+      return o && o[k] != null ? o[k] : null;
+    }, obj);
+  }
+
+  // 切换语言
+  function toggle() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('lang', currentLang);
+    return currentLang;
+  }
+
+  // 设置语言
+  function set(lang) {
+    currentLang = lang;
     localStorage.setItem('lang', lang);
-    renderLang(lang);
-}
+  }
 
-function renderLang(lang) {
-    const d = i18nData[lang];
-    // 同步修改 <title> 和 <h1>
-    document.title = d.title;
-    document.getElementById('i18n-title').textContent = d.title;
-    document.getElementById('i18n-subtitle').textContent = d.subtitle;
-    document.getElementById('menu-toggle').textContent = '📂 ' + d.menu;
-    document.getElementById('i18n-study-plan').textContent = d.studyPlan;
-    document.getElementById('i18n-study-tip').textContent = d.studyTip;
-    document.getElementById('i18n-icp').textContent = d.icp;
-    document.getElementById('i18n-lang-switch').textContent = d.langSwitch;
-    // 菜单链接
-    document.getElementById('i18n-studylog-https').textContent = d.studyLogHttps;
-    document.getElementById('i18n-resource-https').textContent = d.resourceHttps;
-    document.getElementById('i18n-birthday').textContent = d.birthday;
-    document.getElementById('i18n-gesture').textContent = d.gesture;
-    document.getElementById('i18n-airwriting').textContent = d.airwriting;
-    // footer logo alt
-    document.getElementById('footer-logo').alt = d.footer;
-}
+  // 获取当前语言
+  function get() {
+    return currentLang;
+  }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const lang = getLang();
-    renderLang(lang);
-    document.getElementById('i18n-lang-switch').onclick = function () {
-        const newLang = getLang() === 'zh' ? 'en' : 'zh';
-        setLang(newLang);
-    };
-    // 菜单展开/收起切换
-    const menuBtn = document.getElementById('menu-toggle');
-    const menuList = document.getElementById('menu-list');
-    let menuOpen = false;
-    menuBtn.onclick = function () {
-        menuOpen = !menuOpen;
-        menuList.style.display = menuOpen ? 'flex' : 'none';
-        menuBtn.textContent = menuOpen ? '📂 ' + i18nData[getLang()].menuCollapse : '📂 ' + i18nData[getLang()].menu;
-    };
-    menuList.style.display = 'none';
-});
+  // 更新 HTML lang 属性
+  function updateHtmlLang() {
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+  }
+
+  // 公开接口
+  return {
+    init: init,
+    load: load,
+    t: t,
+    uiText: uiText,
+    toggle: toggle,
+    set: set,
+    get: get,
+    updateHtmlLang: updateHtmlLang,
+    get data() { return data; }
+  };
+
+})();
