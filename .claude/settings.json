@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"d:/Code_Project/Web/WebSite1/\" 2>/dev/null | head -30)",
+      "Read(//d/Code_Project/Web/WebSite1/**)",
+      "Bash(ls \"d:/Code_Project/Web/HTML/dscl8404_pagehome/\" 2>/dev/null | head -20)",
+      "Read(//d/Code_Project/Web/HTML/dscl8404_pagehome/**)"
+    ]
+  }
+}
